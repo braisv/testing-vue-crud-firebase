@@ -3,13 +3,13 @@
   
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyCynJ12WUaF3VeTnALO0sF7PSnga4XhG2s",
+    apiKey: process.env.FIREBASE_KEY,
     authDomain: "vue-crud-firebase-98e2a.firebaseapp.com",
     databaseURL: "https://vue-crud-firebase-98e2a.firebaseio.com",
     projectId: "vue-crud-firebase-98e2a",
     storageBucket: "vue-crud-firebase-98e2a.appspot.com",
     messagingSenderId: "47334723494",
-    appId: "1:47334723494:web:85c143634407749cf9c967",
+    appId: process.env.FIREBASE_ID,
     measurementId: "G-P57J1NFZ1R"
   };
 

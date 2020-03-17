@@ -1,11 +1,16 @@
 <template>
     <div>
         <h1>Task List</h1>
+        <ul>
+            <li v-for="task of tasks" :key="task.id">
+                {{ task.name }} - {{ task.id }}
+            </li>
+        </ul>
     </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 export default {
     name: 'Init',
@@ -14,6 +19,9 @@ export default {
     },
     created() {
         this.getTasks( )
+    },
+    computed: {
+        ...mapState(['tasks'])
     }
 }
 </script>

@@ -5,7 +5,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/init',
+    path: '/',
     name: 'Init',
     component: () => import(/* webpackChunkName: "init" */ '../views/Init.vue')
   }

@@ -14,7 +14,7 @@ export default new Vuex.Store({
     getTasks({ commit }) {
       db.collection('tasks').get()
       .then(snapshot => {
-        snapshot.map(doc => console.log(doc.data))
+        snapshot.map(doc => console.log(doc.data()))
       })
     }
   },

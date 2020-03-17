@@ -24,7 +24,6 @@ export default new Vuex.Store({
           dbTasks.push(task)
         })
       })
-
       commit('setTasks', dbTasks)
     }
   },

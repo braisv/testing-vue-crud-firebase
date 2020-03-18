@@ -7,7 +7,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    tasks: []
+    tasks: [],
+    task: { name: '', id: '' }
   },
   mutations: {
     setTasks(state, tasks) {

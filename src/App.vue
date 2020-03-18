@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <img src="@/assets/logo.png" alt="logo" />
+    <router-link :to="{ name: 'Init' }">
+      <img src="@/assets/logo.png" alt="logo" />
+    </router-link>
     <router-view />
   </div>
 </template>

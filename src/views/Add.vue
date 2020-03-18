@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Add</h1>
-        <form>
+        <form @submit.prevent="addTask(name)">
             <input type="text" v-model="name">
             <button type="submit">Add</button>
         </form>
@@ -10,12 +10,16 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
     name: 'Add',
     data() {
         return {
             name: ''
         }
+    },
+    methods: {
+        ...mapActions(['addTask'])
     }
 }
 </script>

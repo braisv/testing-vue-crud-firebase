@@ -15,6 +15,9 @@ export default new Vuex.Store({
     },
     setTask(state, task) {
       state.task = task
+    },
+    deleteTask(state, id) {
+      state.tasks = state.tasks.filter(task => task.id != id)
     }
   },
   actions: {
@@ -50,11 +53,13 @@ export default new Vuex.Store({
       db.collection('tasks').add({
         name: taskName
       })
-      .then(doc => {
-        let newTask = doc
-        console.log(newTask)
+      .then( () => {
         router.push({ name: 'Init' })
       })
+    },
+    deleteTask({ commit }, id) {
+      db.collection('tasks').doc(id).delete()
+      .then( () => commit('deleteTask', id))
     }
   },
   modules: {

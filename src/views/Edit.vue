@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Editar</h1>
+    <h1>Edit</h1>
     <form @submit.prevent="editTask(task)">
         {{id}} - {{task}}
       <input type="text" v-model="task.name" />
